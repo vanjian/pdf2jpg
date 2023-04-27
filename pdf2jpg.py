@@ -20,7 +20,7 @@ def PDF2png(name):
     for i_page in range(page_num):
         page = docl[i_page]
         # 使用matrix参数来控制输出图像的精度
-        matrix = fitz.Matrix(2, 2)  # 放大10倍
+        matrix = fitz.Matrix(2, 2)  # 放大2倍
         pm = page.get_pixmap(matrix=matrix, colorspace="rgb")
         
         n_index = "_%d"  %index
@@ -30,7 +30,6 @@ def PDF2png(name):
         
 if __name__ == "__main__":
     '''
-    tmp_name = "44.深圳市应对气候变化标准体系框架构建研究.pdf"
     PDF2png(tmp_name)
     
     '''
