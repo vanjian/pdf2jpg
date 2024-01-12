@@ -11,3 +11,14 @@ pip install pymupdf
 
 
 闲来无事，随便玩玩
+
+cmd直接pdf2jpg
+
+````python
+import fitz
+doc = fitz.open(filename)
+page = doc.load_page(0)
+matrix = fitz.Matrix(2, 2)
+pm = page.get_pixmap(matrix=matrix,colorspace="rgb")
+pm.save(filename)
+````
